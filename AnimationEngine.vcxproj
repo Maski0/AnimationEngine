@@ -130,10 +130,21 @@
     <ClInclude Include="Application.h" />
     <ClInclude Include="glad\glad.h" />
     <ClInclude Include="glad\khrplatform.h" />
+    <ClInclude Include="math\mat4.h" />
+    <ClInclude Include="math\quat.h" />
+    <ClInclude Include="math\vec2.h" />
+    <ClInclude Include="math\vec3.h" />
+    <ClInclude Include="math\vec4.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="glad\glad.c" />
     <ClCompile Include="MainWin.cpp" />
+    <ClCompile Include="math\mat4.cpp" />
+    <ClCompile Include="math\quat.cpp" />
+    <ClCompile Include="math\vec3.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
