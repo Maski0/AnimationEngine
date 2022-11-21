@@ -104,10 +104,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)glad\;$(SolutionDir)math\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -130,23 +132,50 @@
     <ClInclude Include="Application.h" />
     <ClInclude Include="glad\glad.h" />
     <ClInclude Include="glad\khrplatform.h" />
+    <ClInclude Include="glTF\cgltf.h" />
+    <ClInclude Include="Frame.h" />
+    <ClInclude Include="glTF\GLTFLoader.h" />
+    <ClInclude Include="Interpolation.h" />
+    <ClInclude Include="TransformTrack.h" />
+    <ClInclude Include="Track.h" />
     <ClInclude Include="math\mat4.h" />
     <ClInclude Include="math\quat.h" />
     <ClInclude Include="math\Transform.h" />
     <ClInclude Include="math\vec2.h" />
     <ClInclude Include="math\vec3.h" />
     <ClInclude Include="math\vec4.h" />
+    <ClInclude Include="Renderer\Attribute.h" />
+    <ClInclude Include="Renderer\Draw.h" />
+    <ClInclude Include="Renderer\IndexBuffer.h" />
+    <ClInclude Include="Renderer\Shader.h" />
+    <ClInclude Include="Renderer\stb_image.h" />
+    <ClInclude Include="Renderer\Texture.h" />
+    <ClInclude Include="Renderer\Uniform.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="glad\glad.c" />
+    <ClCompile Include="glTF\cgltf.cpp" />
+    <ClCompile Include="glTF\GLTFLoader.cpp" />
+    <ClCompile Include="TransformTrack.cpp" />
+    <ClCompile Include="Track.cpp" />
     <ClCompile Include="MainWin.cpp" />
     <ClCompile Include="math\mat4.cpp" />
     <ClCompile Include="math\quat.cpp" />
     <ClCompile Include="math\Transform.cpp" />
     <ClCompile Include="math\vec3.cpp" />
+    <ClCompile Include="Renderer\Attribute.cpp" />
+    <ClCompile Include="Renderer\Draw.cpp" />
+    <ClCompile Include="Renderer\IndexBuffer.cpp" />
+    <ClCompile Include="Renderer\Shader.cpp" />
+    <ClCompile Include="Renderer\stb_image.cpp" />
+    <ClCompile Include="Renderer\Texture.cpp" />
+    <ClCompile Include="Renderer\Uniform.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include=".gitignore" />
     <None Include="README.md" />
+    <None Include="Shaders\lit.frag" />
+    <None Include="Shaders\static.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
